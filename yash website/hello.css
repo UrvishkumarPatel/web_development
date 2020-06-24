@@ -1,0 +1,28 @@
+body{
+	  background: rgb(200,10,500);
+	  text-orientation: rgb(100,200,150)
+
+}
+.border{border: 1px black solid;}
+.indent{
+	margin-left: 10px;
+
+}
+.back{
+	background: lightblue;
+}
+
+h1 {
+  text-align: center; /*align the text to center*/
+  color: yellow; /* Set text color to red */
+  display: inline;
+}
+.serif {
+  font-family: "Times New Roman", Times, serif; /*serif font family*/
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: lightblue;
+  }
+}

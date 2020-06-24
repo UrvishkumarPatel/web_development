@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoL</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link href="{{ url_for('static', filename="bootstrap/css/theme/" + theme + "/bootstrap.css") }}" rel="stylesheet">
+
+</head>
+<body>
+	
+	<h1>hello world</h1>
+    <h2>sublime text</h2>
+	<p>this is web development</p>
+	<img src="{{url_for('static', filename='img/ginger.jpg')}}" 
+	style=	  'display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 30%;'>
+<br>
+	<a href="/info" class="back">this is link for yash</a>
+
+</body>
+</html>
+
