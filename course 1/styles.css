@@ -9,13 +9,20 @@ body{
 
 }
 
+.small{
+  width:150px;
+}
+.big{
+  width:350px;
+}
+
 .back{
 	background: lightblue;
 }
 
 h1 {
   text-align: center; /*align the text to center*/
-  color: yellow; /* Set text color to red */
+  color: green; /* Set text color to red */
   display: inline;
 }
 .serif {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>website1</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+	
+	<div class="row">
+		<div class="col-md-4 border">
+			<a href="yash.html" class="indent">home</a>
+		</div>
+		<div class="col-md-8 border">
+			<a href="yash.html" class="indent">home</a>
+		</div>
+	</div>
+	<hr>
+
+	<h1 id ="h1tag" onclick="hello('yash Patel')">
+		<span class="back">Yash Patel</span> website
+	</h1>
+	<br>
+	<hr>
+	<img id="0" src="ginger.jpg" class="small" onclick="img_click()">
+	<img id="1" src="ALL THE BEST.JPG" class="small" onclick="img_click()">
+	<img id="2" src="image.jpg" class="small" onclick="img_click()">
+	<img id="3" src="image2.jpg" class="small" onclick="img_click()">
+	<br>
+
+	<button onclick="sub()">previous</button>
+	<button onclick="add()" id ="forward">next</button>
+
+	<br>
+	<!-- <img class="big" onmouseover='bigImg(this)' onmouseout="normalImg(this)" border="0" src="ginger.jpg" alt="Smiley ginger	"> -->
+	<img class="big" onmouseover='paused=true;' onmouseout="paused=false;" border="0" src="ginger.jpg" alt="Smiley ginger	">
+	
+	<hr>
+	<ul>
+		<li class = "hello" onclick="hello2()">hello</li>
+		<li>hello2</li>
+		<li>hello3</li>
+	</ul>
+
+	
+
+
+	<script type="text/javascript">
+		a=1;
+		function hello(name){
+			$("#h1tag").html("hello "+name +" "+ a);
+			a = a+1;
+		}
+		function bigImg(x) {
+		  x.style.width = "30%";
+		  // x.style.width = "200px";
+		}
+
+		function normalImg(x) {
+		  // x.style.height = "50px";
+		  x.style.width = "20%";
+		}
+
+		function hello2() {
+			$(".hello").html("goodbye");
+			$(".hello").click(function () {
+				$(".hello").html("hello");
+				$(".hello").off("click");
+			});
+		}
+
+		function img_click() {
+			$(".small").click(function () {
+				$(".big").attr( 'src',  $(this).attr('src') );
+			})
+		}
+		var paused = false
+
+		setInterval(function(){
+			if (!paused) {$("#forward").click();}
+		}, 1000);
+
+		var counter=0;
+		function add() {
+			counter += 1;
+			$(".big").attr('src', $("#"+(counter%4)).attr('src'))
+		}
+
+		function sub() {
+			counter -= 1;
+			$(".big").attr('src', $("#"+(counter%4)).attr('src'))
+		}
+	</script>
+
+</body>
+</html>
+
